@@ -1,0 +1,14 @@
+def is_prime(number):
+    if number <= 1:
+        return False  # Numbers less than or equal to 1 are not prime
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False  # Found a divisor, so the number is not prime
+    return True  # No divisors found, so the number is prime
+
+# Example usage:
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
